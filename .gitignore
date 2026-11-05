@@ -1,0 +1,21 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+uploads/*
+!uploads/.gitkeep
+vectorstore/*
+!vectorstore/.gitkeep
+# Environment and secrets
+.env.*
+!.env.example
+.streamlit/secrets.toml
+serviceAccountKey.json
+*.pem
+
+# Python and IDE
+venv/
+.pytest_cache/
+.mypy_cache/
+.idea/
+.vscode/

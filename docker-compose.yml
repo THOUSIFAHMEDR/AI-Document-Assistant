@@ -1,0 +1,20 @@
+services:
+  ai-document-assistant:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: ai-document-assistant
+
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+
+    env_file:
+      - .env
+
+    volumes:
+      - ./uploads:/app/uploads
+      - ./vectorstore:/app/vectorstore
+
+    restart: unless-stopped
